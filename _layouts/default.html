@@ -47,5 +47,31 @@
     <script src="{{ '/assets/js/common.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/bubble_visual_hash.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/semantic_scholar_citation_count.js' | relative_url }}"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function(){
+  const navItems = document.querySelectorAll('#slide-nav .nav-item');
+  const slideContainer = document.querySelector('.horizontal-slide-container');
+  const pages = document.querySelectorAll('.slide-page');
+
+  navItems.forEach(item=>{
+    item.addEventListener('click',function(){
+      const targetId = this.dataset.target;
+      const targetEl = document.getElementById(targetId);
+      targetEl.scrollIntoView({behavior:"smooth", block:"start", inline:"start"});
+      navItems.forEach(n=>n.classList.remove('active'));
+      this.classList.add('active');
+    })
+  })
+
+  slideContainer.addEventListener('scroll',function(){
+    const scrollLeft = this.scrollLeft;
+    const pageWidth = pages[0].offsetWidth;
+    const idx = Math.round(scrollLeft / pageWidth);
+    navItems.forEach((n,i)=>{
+      n.classList.toggle('active', i===idx);
+    })
+  })
+})
+</script>
 </body>
 </html>
