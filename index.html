@@ -4,142 +4,35 @@ title : Homepage
 navbar_title: Home
 ---
 
-<div class="horizontal-slide-container">
-
-  <!-- ========= Home 页面 ========= -->
-  <section id="sec-home" class="slide-page">
-    <div class="row">
-        <div class="col-lg-3 col-md-4">
-            {% include widgets/profile_card_mini.html %}
-        </div>
-        <div class="col-lg-9 col-md-8">
-
-            {% include widgets/profile_card_bio_only.html %}
-
-            {% include widgets/debug_repo_name.html %}
-            {% include widgets/debug_url.html %}
-
-            {% if site.data.display.homepage.show_experience %}
-                {% include widgets/experience_card.html %}
-            {% endif %}
-
-            {% if site.data.display.homepage.show_news %}
-            {% assign count_news = site.news | size %}
-            {% if count_news > 0 %}
-            {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
-            {% endif %}
-            {% endif %}
-
-            {% if site.data.display.homepage.show_selected_publications %}
-            {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
-            {%
-            include widgets/publication_card.html
-            publications=pubs
-            title='<i class="fas fa-star"></i> Selected Publications'
-            %}
-            {% endif %}
-        </div>
+<div class="row">
+    <div class="col-lg-3 col-md-4">
+        {% include widgets/profile_card_mini.html %}
     </div>
-  </section>
+    <div class="col-lg-9 col-md-8">
 
-  <!-- ========= Research 页面 ========= -->
-  <section id="sec-research" class="slide-page">
-    {% comment %}
-    ---
-    layout: default
-    title : Research
-    navbar_title: Research
-    ---
-   <h2>Research Interests</h2>
+        {% include widgets/profile_card_bio_only.html %}
 
-<p>
-My research interests lie at the intersection of Machine Learning and Data Science.
-I am particularly interested in the following areas:
-</p>
+        {% include widgets/debug_repo_name.html %}
+        {% include widgets/debug_url.html %}
 
-<ul>
-  <li><strong>Machine Learning</strong></li>
-  <li><strong>Continual Learning</strong></li>
-  <li><strong>Multimodal Learning</strong></li>
-  <li><strong>Interpretable Machine Learning</strong></li>
-</ul>
+        {% if site.data.display.homepage.show_experience %}
+            {% include widgets/experience_card.html %}
+        {% endif %}
 
-<h2>Current Research</h2>
+        {% if site.data.display.homepage.show_news %}
+        {% assign count_news = site.news | size %}
+        {% if count_news > 0 %}
+        {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
+        {% endif %}
+        {% endif %}
 
-<p>
-My current research focuses on machine learning modeling and interpretable analysis based on data-driven methods.
-I am interested in developing effective and reliable machine learning approaches for real-world applications.
-</p>
-    {% endcomment %}
-
-  </section>
-
-  <!-- ========= Projects 页面 ========= -->
-  <section id="sec-projects" class="slide-page">
-    {% comment %}
-    打开你的 projects.html
-    删除最顶部：
-    ---
-    layout: default
-    title : Projects
-    navbar_title: Projects
-    ---
-    <h2>Research Projects</h2>
-
-<hr>
-
-<h3>Loan Default Prediction Based on Machine Learning</h3>
-
-<p>
-<strong>Research Area:</strong> Machine Learning, Credit Risk Prediction, Data Mining
-</p>
-
-<p>
-This project focuses on predicting loan default risk using the Lending Club dataset.
-The objective is to develop and compare multiple machine learning models for identifying borrowers with potential default risk.
-</p>
-
-<h4>Research Workflow</h4>
-
-<ul>
-  <li>Data preprocessing and missing value handling</li>
-  <li>Exploratory data analysis</li>
-  <li>Feature engineering</li>
-  <li>Feature selection</li>
-  <li>Class imbalance handling using SMOTE</li>
-  <li>Machine learning model training and comparison</li>
-  <li>Hyperparameter optimization</li>
-  <li>Model evaluation and interpretability analysis</li>
-</ul>
-
-<h4>Machine Learning Models</h4>
-
-<ul>
-  <li>Logistic Regression</li>
-  <li>Decision Tree</li>
-  <li>Random Forest</li>
-  <li>Gradient Boosting</li>
-  <li>XGBoost</li>
-  <li>LightGBM</li>
-  <li>CatBoost</li>
-</ul>
-
-<h4>Research Objective</h4>
-
-<p>
-The project aims to investigate the performance of different machine learning models in loan default prediction.
-In addition to predictive performance, the research also focuses on feature importance and model interpretability to better understand the factors associated with credit default risk.
-</p>
-
-<hr>
-
-<h3>Future Projects</h3>
-
-<p>
-More research projects will be added here.
-</p>
-    {% endcomment %}
-
-  </section>
-
+        {% if site.data.display.homepage.show_selected_publications %}
+        {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
+        {%
+        include widgets/publication_card.html
+        publications=pubs
+        title='<i class="fas fa-star"></i> Selected Publications'
+        %}
+        {% endif %}
+    </div>
 </div>
