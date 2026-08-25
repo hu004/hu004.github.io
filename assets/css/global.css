@@ -87,26 +87,3 @@ div.lazy {
 .badge-publication {
     font-size: 100%;
 }
-.horizontal-slide-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  width: 100%;
-}
-.slide-page {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-  padding: 0 15px;
-  box-sizing: border-box;
-}
-.horizontal-slide-container::-webkit-scrollbar{
-  display:none;
-}
-#slide-nav .nav-item.active .nav-link {
-  color:#007bff;
-  font-weight:bold;
-}
-.email-text {
-    font-family: Source Code Pro, monospace;
-}
