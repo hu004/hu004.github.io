@@ -19,26 +19,26 @@ github: hu004
 
 short_bio_text_justify: false
 short_bio: >-
-  <p>
-    I am currently a Master's student at Kunming University of Science and Technology.
-    My research interests include Machine Learning, continual learning, and multimodal learning.
-  <p>
-   I am particularly interested in continual learning and multimodal learning research.
-   My current research project focuses on machine learning modeling and interpretable analysis based on data-driven methods.
-  </p>
-
+ <p>
+  I am currently a Master's student at Kunming University of Science and Technology.
+  My research interests include Machine Learning, Continual Learning, and Multimodal Learning.
+</p>
+<p>
+  I am particularly interested in continual learning and multimodal learning research.
+  My current research project focuses on machine learning modeling and interpretable analysis based on data-driven methods.
+</p>
 portrait_url: /assets/images/photos/portrait.jpg
 portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
 - name: Kunming University of Science and Technology
-  logo: /assets/images/budges/kust.png
+  logo: /assets/images/badges/kust.png
   position: >- 
      Master's Student in Computer Science
   date: 2026 - 
 - name: Hunan University of Finance and Economics
-  logo: /assets/images/budges/hufe.png
+  logo: /assets/images/badges/hufe.png
   position: B.S. in Data Science and Big Data Technology
   date: Sep. 2022 - Jun. 2026
 
