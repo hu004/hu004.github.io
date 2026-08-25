@@ -6,16 +6,12 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto" id="slide-nav">
-                <li class="nav-item active" data-target="sec-home">
-                    <a class="nav-link">Home</a>
+            <ul class="navbar-nav ml-auto">
+                {% for item in site.data.navigation.pages %}
+                <li class="nav-item {% if item.name == page.navbar_title or include.active_page == item.name %}active{% endif %}">
+                    <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
                 </li>
-                <li class="nav-item" data-target="sec-research">
-                    <a class="nav-link">Research</a>
-                </li>
-                <li class="nav-item" data-target="sec-projects">
-                    <a class="nav-link">Projects</a>
-                </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
