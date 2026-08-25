@@ -5,7 +5,6 @@ navbar_name: "ZiYi Hu"
 positions:
 - name: Master Student
 - name: Kunming University of Science and Technology
-logo: "C:\Users\86182\Desktop\kust.webp"
 
 
 email: "zoehu04@gmail.com"
@@ -34,12 +33,12 @@ portrait_caption: >-
 
 education:
 - name: Kunming University of Science and Technology
-  logo: "C:\Users\86182\Desktop\kust.webp"
+  logo: /assets/images/budges/kust.png
   position: >- 
      Master's Student in Computer Science
   date: 2026 - 
 - name: Hunan University of Finance and Economics
-  logo: "C:\Users\86182\Desktop\hufe.webp"
+  logo: /assets/images/budges/hufe.png
   position: B.S. in Data Science and Big Data Technology
   date: Sep. 2022 - Jun. 2026
 
